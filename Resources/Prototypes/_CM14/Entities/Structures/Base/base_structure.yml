@@ -23,6 +23,7 @@
   components:
   - type: Corrodible
     isCorrodible: false
+  - type: CMIconSmooth
 
 - type: entity
   id: CMCorrodible
@@ -48,8 +49,8 @@
   - type: PlacementReplacement
     key: walls
   - type: Damageable
-    damageContainer: Inorganic
-    damageModifierSet: Metallic
+    damageContainer: StructuralMarine
+    damageModifierSet: StructuralMarine
   - type: Occluder
   - type: Airtight
   - type: RadiationBlocker

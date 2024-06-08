@@ -202,10 +202,10 @@
 #      #  amount: 5
 #      #- id: CMBoxFlashlights
 #      #  amount: 1
-#      - id: CMBoxFlares
-#        amount: 1
-#      #- id: CMMarkingFlarePackM94
-#      #  amount: 10
+      - id: CMBoxPackFlare
+        amount: 1
+      - id: CMPackFlare
+        amount: 10
 #      #- id: CMSignalFlarePackM89S
 #      #  amount: 1
     - name: Miscellaneous
@@ -358,8 +358,8 @@
       entries:
       - id: CMM5Bayonet
         amount: 25
-      #- id: CMMarkingFlarePackM94
-      #  amount: 10
+      - id: CMPackFlare
+        amount: 10
 
 - type: entity
   parent: ColMarTechBase
@@ -419,7 +419,7 @@
         name: first-aid pouch (refillable injectors)
       - id: CMPouchFirstAidSplintsGauzeOintment
         name: first-aid pouch (gauze, ointment) # TODO CM14 splints comma
-      - id: CMPouchFirstAidPills # TODO CM14 packets
+      - id: CMPouchFirstAidPills
         name: first-aid pouch (pills)
       - id: CMPouchFlareFilled
         name: Flare pouch (Filled)
@@ -691,9 +691,9 @@
     #  points: 5
     - name: Medical Supplies
       entries:
-      - id: CMBurnKit
+      - id: CMBurnKit10
         points: 2
-      - id: CMTraumaKit
+      - id: CMTraumaKit10
         points: 2
       - id: CMAdvFirstAidKitFilled
         points: 12
@@ -813,7 +813,7 @@
         name: first-aid pouch (refillable injectors)
       - id: CMPouchFirstAidSplintsGauzeOintment
         name: first-aid pouch (gauze, ointment) # TODO CM14 splints comma
-      - id: CMPouchFirstAidPills # TODO CM14 packets
+      - id: CMPouchFirstAidPills
         name: first-aid pouch (pills)
       - id: CMPouchFlareFilled
         name: Flare pouch (Filled)
@@ -983,8 +983,11 @@
     #- id: CMFuelTankStrapPouch
     #- id: CMWeldingGoggles
       - id: CMPouchGeneralLarge
+        points: 10
       - id: CMBeltUtilityCombat
+        points: 15
       - id: CMPouchAutoinjectorFill
+        points: 15
     - name: Utilities
       entries:
       - id: CMFireExtinguisherPortable
@@ -1232,7 +1235,7 @@
         name: first-aid pouch (refillable injectors)
       - id: CMPouchFirstAidSplintsGauzeOintment
         name: first-aid pouch (gauze, ointment) # TODO CM14 splints comma
-      - id: CMPouchFirstAidPills # TODO CM14 packets
+      - id: CMPouchFirstAidPills
         name: first-aid pouch (pills)
       #- id: CMElectronicsPouchFull
       - id: CMPouchExplosive
@@ -1483,7 +1486,7 @@
         name: first-aid pouch (refillable injectors)
       - id: CMPouchFirstAidSplintsGauzeOintment
         name: first-aid pouch (gauze, ointment) # TODO CM14 splints comma
-      - id: CMPouchFirstAidPills # TODO CM14 packets
+      - id: CMPouchFirstAidPills
         name: first-aid pouch (pills)
       - id: CMPouchFirstResponder # TODO CM14 test everything fits
       - id: CMPouchFlareFilled
@@ -1710,7 +1713,7 @@
         name: first-aid pouch (refillable injectors)
       - id: CMPouchFirstAidSplintsGauzeOintment
         name: first-aid pouch (gauze, ointment) # TODO CM14 splints comma
-      - id: CMPouchFirstAidPills # TODO CM14 packets
+      - id: CMPouchFirstAidPills
         name: first-aid pouch (pills)
       - id: CMPouchMagazinePistolLarge
       - id: CMPouchMagazine
@@ -1894,7 +1897,7 @@
         name: first-aid pouch (refillable injectors)
       - id: CMPouchFirstAidSplintsGauzeOintment
         name: first-aid pouch (gauze, ointment) # TODO CM14 splints comma
-      - id: CMPouchFirstAidPills # TODO CM14 packets
+      - id: CMPouchFirstAidPills
         name: first-aid pouch (pills)
       - id: CMPouchFirstResponder
       - id: CMPouchFlareFilled
