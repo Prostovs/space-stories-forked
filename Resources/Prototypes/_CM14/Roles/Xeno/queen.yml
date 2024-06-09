@@ -26,6 +26,7 @@
   components:
   - type: SpawnPoint
     job_id: CMXenoQueen
+  - type: XenoLeaderSpawnPoint
   - type: Sprite
     layers:
     - sprite: Markers/jobs.rsi

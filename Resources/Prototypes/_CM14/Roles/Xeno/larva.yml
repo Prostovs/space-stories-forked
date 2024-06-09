@@ -16,6 +16,7 @@
   components:
   - type: SpawnPoint
     job_id: CMXenoLarva
+  - type: XenoSpawnPoint
   - type: Sprite
     layers:
     - sprite: Markers/jobs.rsi
