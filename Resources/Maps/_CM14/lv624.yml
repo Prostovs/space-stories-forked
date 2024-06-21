@@ -12943,13 +12943,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: -4.5,-53.5
       parent: 1
-- proto: CMDrinkWYWaterBottle30
-  entities:
-  - uid: 2040
-    components:
-    - type: Transform
-      pos: -7.610465,-37.2031
-      parent: 1
 - proto: CMDropshipDestination
   entities:
   - uid: 2041

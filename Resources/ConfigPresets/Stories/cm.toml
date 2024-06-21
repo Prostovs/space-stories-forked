@@ -42,7 +42,7 @@ monstermos_rip_tiles = false
 grid_impulse         = false
 
 [physics]
-maxlinvelocity = 41
+maxlinvelocity = 51
 
 [infolinks]
 bug_report = "https://discord.gg/5j3WhYanuQ"
