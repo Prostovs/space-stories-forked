@@ -1,0 +1,18 @@
+- type: gameMap
+  id: LV624
+  mapName: LV-624
+  mapPath: /Maps/_RMC14/lv624.yml
+  minPlayers: 0
+  stations:
+    LV624:
+      stationProto: CMStandardPlanet
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'LV-624'
+        - type: StationJobs
+          overflowJobs:
+          - CMXenoLarva
+          availableJobs:
+            #Xeno
+            CMXenoQueen: [1, 1]
+            CMXenoLarva: [7, 7]

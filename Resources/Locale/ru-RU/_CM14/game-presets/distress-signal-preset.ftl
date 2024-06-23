@@ -8,6 +8,9 @@ cm-distress-signal-minorxenovictory = [color=purple]Малая победа кс
     Ксеноморфы захватили корабль, но были уничтожены морпехами
 cm-distress-signal-alldied = [color=yellow]Ничья[/color]
     Взаимное уничтожение!
+cm-distress-signal-statistic = Было { $marines } морпехов, из которых выжило { $marinesAlive }.
+    Было { $xenos } ксеноморфов, из которых выжило { $xenosAlive }.
+cm-distress-signal-discord-none = Раунд был завершён досрочно
 cm-distress-signal-discord-majormarinevictory = Крупная победа морпехов
 cm-distress-signal-discord-minormarinevictory = Малая победа морпехов
 cm-distress-signal-discord-majorxenovictory = Крупная победа ксеноморфов

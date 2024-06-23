@@ -1,5 +1,5 @@
 - type: guideEntry
-  parent: CM
+  parent: RMC
   id: CMRule0
   name: Правило 0. Не будь мудаком
   priority: 2
@@ -7,7 +7,7 @@
   text: "/ServerInfo/Guidebook/_Stories/Rules/Core/CMRule0.xml"
 
 - type: guideEntry
-  parent: CM
+  parent: RMC
   id: CMRule1
   name: Правило 1. Гриф
   priority: 3
@@ -15,7 +15,7 @@
   text: "/ServerInfo/Guidebook/_Stories/Rules/Core/CMRule1.xml"
 
 - type: guideEntry
-  parent: CM
+  parent: RMC
   id: CMRule2
   name: Правило 2. Нарушение игровой атмосферы
   priority: 4
@@ -23,7 +23,7 @@
   text: "/ServerInfo/Guidebook/_Stories/Rules/Core/CMRule2.xml"
 
 - type: guideEntry
-  parent: CM
+  parent: RMC
   id: CMRule3
   name: Правило 3. Метагейм
   priority: 5
@@ -31,7 +31,7 @@
   text: "/ServerInfo/Guidebook/_Stories/Rules/Core/CMRule3.xml"
 
 - type: guideEntry
-  parent: CM
+  parent: RMC
   id: CMRule4
   name: Правило 4. ERP
   priority: 6
@@ -39,7 +39,7 @@
   text: "/ServerInfo/Guidebook/_Stories/Rules/Core/CMRule4.xml"
 
 - type: guideEntry
-  parent: CM
+  parent: RMC
   id: CMRule5
   name: Правило 5. Нечестная игра
   priority: 7
