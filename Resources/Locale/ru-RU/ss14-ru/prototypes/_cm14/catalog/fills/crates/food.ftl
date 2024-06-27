@@ -1,6 +1,6 @@
 ent-CMCrateFoodDonuts = ящик пончиков
     .desc = { ent-CMCratePlastic.desc }
-ent-CMCrateFoodMRE = ящик ИПР USCM
+ent-CMCrateFoodMRE = ящик ИРП USCM
     .desc = { ent-CMCratePlastic.desc }
 ent-CMCrateFoodPizza = ящик пиццы
     .desc = { ent-CMCratePlastic.desc }

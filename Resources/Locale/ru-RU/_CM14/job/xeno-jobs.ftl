@@ -32,8 +32,8 @@ cm-job-name-xeno-sentinel = Часовой
 CMJobXenoSentinel = Часовой
 cm-job-name-xeno-spitter = Плеватель
 CMJobXenoSpitter = Плеватель
-cm-job-name-xeno-warrior = Войн
-CMJobXenoWarrior = Войн
+cm-job-name-xeno-warrior = Воин
+CMJobXenoWarrior = Воин
 # TODO CM14
 department-CMXeno = Ксеноморф
 cm-department-Xeno-description = ""

@@ -1,4 +1,4 @@
-ent-CMCrateMedicalSurgery = ящик хирургический (анестезия, снаряжение хирурга)
+ent-CMCrateMedicalSurgery = ящик хирургический (анестезия, одежда хирурга, хирургический набор)
     .desc = { ent-CMCrateSecureSurgery.desc }
 ent-CMCrateMedicalBodyBag = ящик мешков для тела (x28)
     .desc = { ent-CMCrateMedical.desc }

@@ -1,6 +1,6 @@
 ent-CMSheetMetalBase = { ent-SheetMetalBase }
     .desc = Лист металла, часто используемый в различных сферах.
-ent-CMSheetMetal = метал
+ent-CMSheetMetal = металл
     .desc = Листы, изготовленные из металла. Их прозвали металлическими листами.
     .suffix = Полный
 ent-CMSheetMetal1 = { ent-CMSheetMetal }

@@ -1,4 +1,4 @@
-ent-WeaponLauncherM92 = гранатомет M92
+ent-WeaponLauncherM83 = гранатомет M83
     .desc = Упс.
 ent-CMWeaponLauncherM79 = гранатомет M79
     .desc = Гранатомет M79 - это однозарядный гранатомет, стреляющий с плеча с разрывным механизмом.
