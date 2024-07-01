@@ -1,9 +1,9 @@
 ﻿<controls:MarineCommunicationsComputerWindow
     xmlns="https://spacestation14.io"
     xmlns:controls="clr-namespace:Content.Client._RMC14.Marines.Announce"
-    Title="Groundside Operations Console">
+    Title="Консоль наземных операций">
     <BoxContainer Orientation="Vertical" Margin="5">
         <TextEdit Name="Text" Access="Public" HorizontalExpand="True" VerticalExpand="True" />
-        <Button Name="Send" Access="Public" Text="Send" HorizontalExpand="True" />
+        <Button Name="Send" Access="Public" Text="Отправить" HorizontalExpand="True" />
     </BoxContainer>
 </controls:MarineCommunicationsComputerWindow>

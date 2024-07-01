@@ -6,6 +6,7 @@ using Content.Server.Administration.Components;
 using Content.Server.Administration.Managers;
 using Content.Server.GameTicking;
 using Content.Server.GameTicking.Rules;
+using Content.Server.Chat.Managers;
 using Content.Server.Mind;
 using Content.Server.Players.PlayTimeTracking;
 using Content.Server.Power.Components;
@@ -38,6 +39,8 @@ using Content.Shared.Nutrition.Components;
 using Content.Shared.Nutrition.EntitySystems;
 using Content.Shared.Preferences;
 using Content.Shared.Roles;
+using Content.Shared.Chat;
+using Content.Shared.Ghost;
 using Robust.Server.Audio;
 using Robust.Server.Containers;
 using Robust.Server.GameObjects;
@@ -86,6 +89,7 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
     [Dependency] private readonly TransformSystem _transform = default!;
     [Dependency] private readonly XenoSystem _xeno = default!;
     [Dependency] private readonly XenoEvolutionSystem _xenoEvolution = default!;
+    [Dependency] private readonly IChatManager _chatManager = default!;  // Stories-Bioscan
 
     private readonly CVarDef<float>[] _ftlcVars =
     [
@@ -508,7 +512,6 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
             var xenos = EntityQueryEnumerator<ActorComponent, XenoComponent, MobStateComponent, TransformComponent>();
             while (xenos.MoveNext(out var xenoId, out _, out var xeno, out var mobState, out var xform))
             {
-                xenosCount++;
                 if (!xeno.ContributesToVictory)
                     continue;
 
@@ -529,7 +532,6 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
             var marinesAlive = false;
             while (marines.MoveNext(out var marineId, out _, out _, out var mobState, out var xform))
             {
-                marinesCount++;
                 if (HasComp<VictimInfectedComponent>(marineId) || HasComp<VictimBurstComponent>(marineId))
                     continue;
 
@@ -775,9 +777,35 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
         GameRuleComponent gameRule,
         ref RoundEndTextAppendEvent args)
     {
-        base.AppendRoundEndText(uid, component, gameRule, ref args);
+        xenosCount = 0; // Stories-Statistic-Start
+        xenosAliveCount = 0;
+        var xenos = EntityQueryEnumerator<XenoComponent, MobStateComponent>();
+        while (xenos.MoveNext(out var xenoId, out _, out var mobState))
+        {
+            xenosCount++;
+
+            if (_mobState.IsAlive(xenoId, mobState))
+            {
+                xenosAliveCount++;
+            }
+        }
+
+        marinesCount = 0;
+        marinesAliveCount = 0;
+        var marines = EntityQueryEnumerator<MarineComponent, MobStateComponent>();
+        while (marines.MoveNext(out var marineId, out _, out var mobState))
+        {
+            marinesCount++;
+
+            if (_mobState.IsAlive(marineId, mobState))
+            {
+                marinesAliveCount++;
+            }
+        }
+
+        base.AppendRoundEndText(uid, component, gameRule, ref args); // Stories-Statistic-End
         args.AddLine($"{Loc.GetString($"cm-distress-signal-{component.Result.ToString().ToLower()}")}");
-        args.AddLine($"{Loc.GetString("cm-distress-signal-statistic", ("marines", marinesCount), ("marinesAlive", marinesAliveCount), ("xenos", xenosCount), ("xenosAlive", xenosAliveCount)) }");
+        args.AddLine($"{Loc.GetString("cm-distress-signal-statistic", ("marines", marinesCount), ("marinesAlive", marinesAliveCount), ("xenos", xenosCount), ("xenosAlive", xenosAliveCount)) }");  // Stories-Statistic
     }
 
     protected override void ActiveTick(EntityUid uid, CMDistressSignalRuleComponent component, GameRuleComponent gameRule, float frameTime)
@@ -807,6 +835,7 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
         if (Timing.CurTime >= component.NextCheck)
         {
             component.NextCheck = Timing.CurTime + component.CheckEvery;
+            BioscanAnnounce(); // Stories-Bioscan
             CheckRoundShouldEnd();
         }
 
@@ -882,6 +911,44 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
                 yield return ent;
             }
         }
+    }
+
+    public void BioscanAnnounce()
+    {
+        xenosAliveCount = 0;
+        var xenos = EntityQueryEnumerator<XenoComponent, MobStateComponent>();
+        while (xenos.MoveNext(out var xenoId, out _, out var mobState))
+        {
+            if (_mobState.IsAlive(xenoId, mobState))
+                xenosAliveCount++;
+        }
+
+        marinesAliveCount = 0;
+        var marines = EntityQueryEnumerator<MarineComponent, MobStateComponent>();
+        while (marines.MoveNext(out var marineId, out _, out var mobState))
+        {
+            if (_mobState.IsAlive(marineId, mobState))
+                marinesAliveCount++;
+        }
+
+        var wrappedMessage = Loc.GetString("ai-announcement-bioscan-xeno", ("xenoCount", xenosAliveCount), ("marinesCount", marinesAliveCount));
+        var filter = Filter.Empty()
+            .AddWhereAttachedEntity(e =>
+                HasComp<XenoComponent>(e)
+            );
+        var sound = new SoundPathSpecifier("/Audio/_RMC14/Xeno/alien_queen_command3.ogg");
+        _chatManager.ChatMessageToManyFiltered(filter, ChatChannel.Radio, wrappedMessage, wrappedMessage, default, false, true, null);
+        _audio.PlayGlobal(sound, filter, true, AudioParams.Default.WithVolume(-2f));
+
+        wrappedMessage = Loc.GetString("ai-announcement-bioscan-marine", ("marinesCount", marinesAliveCount));
+        filter = Filter.Empty()
+            .AddWhereAttachedEntity(e =>
+                HasComp<MarineComponent>(e) ||
+                HasComp<GhostComponent>(e)
+            );
+        sound = new SoundPathSpecifier("/Audio/_Stories/AI/bioscan.ogg");
+        _chatManager.ChatMessageToManyFiltered(filter, ChatChannel.Radio, wrappedMessage, wrappedMessage, default, false, true, null);
+        _audio.PlayGlobal(sound, filter, true, AudioParams.Default.WithVolume(-2f));
     }
 }
 

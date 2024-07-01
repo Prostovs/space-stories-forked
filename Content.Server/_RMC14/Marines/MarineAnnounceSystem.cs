@@ -49,7 +49,7 @@ public sealed class MarineAnnounceSystem : SharedMarineAnnounceSystem
         if (_timing.CurTime < ent.Comp.LastAnnouncement + ent.Comp.Cooldown)
         {
             // TODO RMC14 localize
-            _popup.PopupClient($"Please allow at least {(int) ent.Comp.Cooldown.TotalSeconds} seconds to pass between announcements", args.Actor);
+            _popup.PopupClient($"Пожалуйста, подождите {(int) ent.Comp.Cooldown.TotalSeconds} секунд между объявлениями.", args.Actor);
             return;
         }
 
@@ -71,8 +71,7 @@ public sealed class MarineAnnounceSystem : SharedMarineAnnounceSystem
         }
 
         var name = Name(sender);
-        var wrappedMessage =
-            $"[font size=14][bold][color=white]Command Announcement[/color][/bold][/font]\n[font size=12][color=red]\n{message}\n\nSigned by,\n{job} {name}[/color][/font]";
+        var wrappedMessage = Loc.GetString("ai-announcement-command", ("message", message), ("job", job), ("name", name));
 
         // TODO RMC14 receivers
         var filter = Filter.Empty()

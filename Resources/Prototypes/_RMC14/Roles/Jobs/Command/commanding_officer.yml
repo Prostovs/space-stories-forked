@@ -63,6 +63,7 @@
     outerClothing: CMCoatOfficer
     id: CMIDCardCommandingOfficer
     ears: CMHeadsetSeniorCommand
+    pocket1: CMCommandTablet
 
 - type: entity
   parent: CMSpawnPointJobBase
