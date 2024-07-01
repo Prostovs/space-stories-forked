@@ -1694,7 +1694,7 @@ entities:
       pos: 15,-8
       parent: 1
     - type: Dropship
-      destination: 115
+      destination: 1227
     - type: MapGrid
       chunks:
         0,0:
@@ -1749,7 +1749,7 @@ entities:
       pos: -9,-8
       parent: 1
     - type: Dropship
-      destination: 6321
+      destination: 1228
     - type: MapGrid
       chunks:
         0,0:
