@@ -1,3 +1,4 @@
+using Content.Server._RMC14.Discord;
 using Content.Server._RMC14.LinkAccount;
 using Content.Server._RMC14.Mapping;
 using Content.Server._RMC14.PlayTimeTracking;
@@ -75,7 +76,7 @@ namespace Content.Server.IoC
             IoCManager.Register<MappingManager>();
             IoCManager.Register<LinkAccountManager>();
             IoCManager.Register<RMCPlayTimeManager>();
-            // IoCManager.Register<RMCDiscordManager>();
+            IoCManager.Register<RMCDiscordManager>();
         }
     }
 }

@@ -178,6 +178,8 @@
     state: "16"
   - type: Icon
     state: "16"
+  - type: Occluder
+    enabled: false
 
 - type: entity
   parent: CMBaseAlamoWall
@@ -188,6 +190,8 @@
     state: "17"
   - type: Icon
     state: "17"
+  - type: Occluder
+    enabled: false
 
 - type: entity
   parent: CMBaseAlamoWall
@@ -238,6 +242,8 @@
     state: "22"
   - type: Icon
     state: "22"
+  - type: Occluder
+    enabled: false
 
 - type: entity
   parent: CMBaseAlamoWall
@@ -248,6 +254,8 @@
     state: "23"
   - type: Icon
     state: "23"
+  - type: Occluder
+    enabled: false
 
 - type: entity
   parent: CMBaseAlamoWall
@@ -278,6 +286,8 @@
     state: "26"
   - type: Icon
     state: "26"
+  - type: Occluder
+    enabled: false
 
 - type: entity
   parent: CMBaseAlamoWall
@@ -288,6 +298,8 @@
     state: "27"
   - type: Icon
     state: "27"
+  - type: Occluder
+    enabled: false
 
 - type: entity
   parent: CMBaseAlamoWall
@@ -298,6 +310,8 @@
     state: "28"
   - type: Icon
     state: "28"
+  - type: Occluder
+    enabled: false
 
 - type: entity
   parent: CMBaseAlamoWall
@@ -308,6 +322,8 @@
     state: "29"
   - type: Icon
     state: "29"
+  - type: Occluder
+    enabled: false
 
 - type: entity
   parent: CMBaseAlamoWall
@@ -338,6 +354,8 @@
     state: "32"
   - type: Icon
     state: "32"
+  - type: Occluder
+    enabled: false
 
 - type: entity
   parent: CMBaseAlamoWall
@@ -348,6 +366,8 @@
     state: "33"
   - type: Icon
     state: "33"
+  - type: Occluder
+    enabled: false
 
 - type: entity
   parent: CMBaseAlamoWall
@@ -358,6 +378,8 @@
     state: "34"
   - type: Icon
     state: "34"
+  - type: Occluder
+    enabled: false
 
 - type: entity
   parent: CMBaseAlamoWall
@@ -368,6 +390,8 @@
     state: "35"
   - type: Icon
     state: "35"
+  - type: Occluder
+    enabled: false
 
 - type: entity
   parent: CMBaseAlamoWall
@@ -398,6 +422,8 @@
     state: "38"
   - type: Icon
     state: "38"
+  - type: Occluder
+    enabled: false
 
 - type: entity
   parent: CMBaseAlamoWall
@@ -408,6 +434,8 @@
     state: "39"
   - type: Icon
     state: "39"
+  - type: Occluder
+    enabled: false
 
 - type: entity
   parent: CMBaseAlamoWall
@@ -430,7 +458,7 @@
         - WallLayer
         density: 1000
   - type: Occluder
-    boundingBox: "-0.5,-0.5,0.5,-0.25"
+    enabled: false
 
 - type: entity
   parent: CMBaseAlamoWall
@@ -453,7 +481,7 @@
         - WallLayer
         density: 1000
   - type: Occluder
-    boundingBox: "-0.5,-0.5,0.5,-0.25"
+    enabled: false
 
 - type: entity
   parent: CMBaseAlamoWall
