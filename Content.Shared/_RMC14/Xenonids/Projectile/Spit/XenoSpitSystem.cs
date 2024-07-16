@@ -2,12 +2,14 @@ using Content.Shared._RMC14.Xenonids.Projectile.Spit.Charge;
 using Content.Shared._RMC14.Xenonids.Projectile.Spit.Scattered;
 using Content.Shared._RMC14.Xenonids.Projectile.Spit.Slowing;
 using Content.Shared._RMC14.Xenonids.Projectile.Spit.Standard;
+using Content.Shared._RMC14.Xenonids.Projectile.Spit.Bombard;
 using Content.Shared.Effects;
 using Content.Shared.Inventory;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Projectiles;
 using Content.Shared.Stunnable;
+using Content.Shared.DoAfter;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
@@ -18,6 +20,7 @@ public sealed class XenoSpitSystem : EntitySystem
 {
     [Dependency] private readonly SharedColorFlashEffectSystem _colorFlash = default!;
     [Dependency] private readonly InventorySystem _inventory = default!;
+    [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
     [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly MovementSpeedModifierSystem _movementSpeed = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
@@ -31,6 +34,9 @@ public sealed class XenoSpitSystem : EntitySystem
         SubscribeLocalEvent<XenoSlowingSpitComponent, XenoSlowingSpitActionEvent>(OnXenoSlowingSpitAction);
         SubscribeLocalEvent<XenoScatteredSpitComponent, XenoScatteredSpitActionEvent>(OnXenoScatteredSpitAction);
         SubscribeLocalEvent<XenoChargeSpitComponent, XenoChargeSpitActionEvent>(OnXenoChargeSpitAction);
+
+        SubscribeLocalEvent<XenoBombardSpitComponent, XenoBombardSpitActionEvent>(OnXenoBombardSpitAction);
+        SubscribeLocalEvent<XenoBombardSpitComponent, XenoBombardSpitDoAfterEvent>(OnXenoBombardSpitDoAfterEvent);
 
         SubscribeLocalEvent<XenoSlowingSpitProjectileComponent, ProjectileHitEvent>(OnXenoSlowingSpitHit);
 
@@ -92,6 +98,39 @@ public sealed class XenoSpitSystem : EntitySystem
             xeno.Comp.Sound,
             xeno.Comp.MaxProjectiles,
             xeno.Comp.MaxDeviation,
+            xeno.Comp.Speed
+        );
+    }
+
+    private void OnXenoBombardSpitAction(Entity<XenoBombardSpitComponent> xeno, ref XenoBombardSpitActionEvent args)
+    {
+        if (args.Handled)
+            return;
+
+        args.Handled = true;
+
+        var ev = new XenoBombardSpitDoAfterEvent(GetNetCoordinates(args.Target));
+        var doAfter = new DoAfterArgs(EntityManager, xeno, xeno.Comp.BombardDelay, ev, xeno)
+        {
+            BreakOnMove = true,
+            Hidden = true,
+        };
+        _doAfter.TryStartDoAfter(doAfter);
+    }
+
+    private void OnXenoBombardSpitDoAfterEvent(Entity<XenoBombardSpitComponent> xeno, ref XenoBombardSpitDoAfterEvent args)
+    {
+        if (args.Cancelled)
+            return;
+
+        args.Handled = _xenoProjectile.TryShoot(
+            xeno,
+            GetCoordinates(args.Coordinates),
+            xeno.Comp.PlasmaCost,
+            xeno.Comp.ProjectileId,
+            xeno.Comp.Sound,
+            1,
+            Angle.Zero,
             xeno.Comp.Speed
         );
     }

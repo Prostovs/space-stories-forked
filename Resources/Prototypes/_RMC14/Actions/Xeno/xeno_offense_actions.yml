@@ -366,7 +366,7 @@
     icon:
       sprite: _RMC14/Actions/xeno_actions.rsi
       state: bombard
-    event: !type:XenoSpitActionEvent
+    event: !type:XenoBombardSpitActionEvent
     useDelay: 30
     range: 15
     checkCanAccess: false
