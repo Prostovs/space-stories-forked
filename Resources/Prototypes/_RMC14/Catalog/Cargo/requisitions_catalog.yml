@@ -136,6 +136,8 @@
         crate: CMCrateGrenadesHighExplosive
       - cost: 3000
         crate: CMCrateGrenadesFrag
+      - cost: 4000
+        crate: RMCCrateBreachingCharges
     - name: Еда
       entries:
       - cost: 1000
@@ -212,3 +214,11 @@
         crate: CMCrateMagazineM96SIncendiary
       - cost: 2000
         crate: CMCrateMagazineXM43E1
+      - cost: 4000
+        crate: RMCCrateM5DemoSpecMixed
+      - cost: 3000
+        crate: RMCCrateM5DemoSpecHighExplosive
+      - cost: 3000
+        crate: RMCCrateM5DemoSpecAntiArmor
+#      - cost: 3000
+#        crate: RMCCrateM5DemoSpecWhitePhosphorous
