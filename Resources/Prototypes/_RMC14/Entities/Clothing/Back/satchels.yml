@@ -44,7 +44,7 @@
       - RMCScoutArmor
     denyReason: rmc-wear-scout-armor-required
   - type: ThermalCloak
-    opacity: 0.002
+    opacity: 0.025
     restrictWeapons: true
     whitelist:
       components:

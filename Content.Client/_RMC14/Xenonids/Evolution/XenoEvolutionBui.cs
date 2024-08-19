@@ -79,11 +79,11 @@ public sealed class XenoEvolutionBui : BoundUserInterface
         }
 
         var lackingOvipositor = State is XenoEvolveBuiState { LackingOvipositor: true };
-        _window.PointsLabel.Text = $"Evolution points: {xeno.Points} / {xeno.Max}";
+        _window.PointsLabel.Text = $"Очки эволюции: {xeno.Points} / {xeno.Max}";
         if (lackingOvipositor)
         {
             // TODO RMC14 for some reason this doesn't properly wrap text
-            _window.OvipositorNeededLabel.SetMarkupPermissive("[bold][color=red]The Queen must be in their\novipositor for you to gain points![/color][/bold]");
+            _window.OvipositorNeededLabel.SetMarkupPermissive("[bold][color=red]Королева должна быть на\nяйцекладе, чтобы вы могли получить очки![/color][/bold]");
             _window.OvipositorNeededLabel.Visible = true;
         }
         else

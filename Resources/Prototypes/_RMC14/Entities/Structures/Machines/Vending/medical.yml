@@ -186,7 +186,7 @@
       - id: CMBeakerLarge
         name: Мензурка, большая (120 ед.)
         amount: 3
-      - id: CMBoxPillCanister
+      - id: RMCBoxPillCanister
         amount: 2
       - id: Dropper # TODO RMC14 cm dropper
         amount: 3

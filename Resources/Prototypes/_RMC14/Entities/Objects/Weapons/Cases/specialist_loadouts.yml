@@ -138,7 +138,7 @@
     - id: RMCThermalTarpFolded
 #    - id: RMCPlasticExplosives
 #      amount: 2
-#    - id: CMBinoculars
+    - id: RMCLaserDesignatorScout
   - type: CMChangeUserOnVend
     addComponents:
     - type: ScoutWhitelist

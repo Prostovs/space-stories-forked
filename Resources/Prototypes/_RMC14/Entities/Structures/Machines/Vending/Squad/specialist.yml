@@ -118,7 +118,7 @@
     - name: Пояс
       choices: { CMBelt: 1 }
       entries:
-    #- id: CMG8AGeneralUtilityPouch
+      - id: RMCBeltUtilityGeneral
       - id: CMBeltMarine
     #- id: CMM276GeneralPistolHolsterRig
     #- id: CMM276M63HolsterRig
@@ -155,8 +155,8 @@
       - id: CMWebbingBlack
       #- id: CMShoulderHolster
       - id: CMWebbing
-    #- id: CMDropPouch
-    - name: Маски
+      - id: CMWebbingPouch
+    - name: Mask
       choices: { CMMask: 1 }
       entries:
       - id: CMMaskGas
@@ -203,15 +203,19 @@
       entries:
       - id: RMCBinoculars
         points: 5
-    - name: Оптика для шлема
+      - id: RMCLaserDesignator
+        points: 15
+    - name: Helmet Optics
       entries: [ ]
     #- id: CMMedicalHelmetOptic
     #- id: CMWeldingVisor
-    - name: Памфлеты
-      entries: [ ]
-    #- id: CMPamphletJTAC
+    - name: Pamphlets
+      entries:
+      - id: CMPamphletJTAC
+        points: 15
     #- id: CMPamphletEngineering
-    - name: Радиоключи
+    #  points: 15
+    - name: Radio Keys
       entries:
       - id: CMEncryptionKeyEngineer
         points: 5

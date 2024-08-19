@@ -32,6 +32,9 @@
         RMCSkillSurgery: 1
     - type: MarineOrders
     - type: BaseGunWhitelist
+    - type: CMVendorUser
+      points: 45
+  hidden: false
 
 - type: startingGear
   id: CMGearDCC

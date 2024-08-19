@@ -3,6 +3,7 @@
   - CMXenoDeveloped
   - CMXenoTail
   - CMXenoFlammable
+  - RMCXenoSpeechSounds
   id: CMXenoPraetorian
   name: Praetorian
   description: A huge, looming beast of an alien.
@@ -61,7 +62,7 @@
     damage:
       groups:
         Brute: 40
-  - type: Tackle
+  - type: Tackle # min: 2, max: 5
     threshold: 3
     stun: 5
     chance: 0.45

@@ -1,5 +1,7 @@
 marking-RMCUnderwearBoxers = Боксеры
 marking-RMCUnderwearBoxers-c_boxers = Боксеры
+marking-RMCUnderwearBoxersBlue = Голубые боксеры
+marking-RMCUnderwearBoxersBlue-d_boxers = Голубые боксеры
 marking-RMCUnderwearBriefs = Брифы
 marking-RMCUnderwearBriefs-c_briefs = Брифы
 marking-RMCUnderwearLowriders = Низкие бортики

@@ -3,6 +3,7 @@
   - CMXenoDeveloped
   - CMXenoTail
   - CMXenoFlammable
+  - RMCXenoSpeechSounds
   id: CMXenoCrusher
   name: Crusher
   description: A huge alien with an enormous armored crest.
@@ -48,7 +49,6 @@
       types:
         Blunt: 60
         Structural: 750
-  - type: XenoShield
   - type: XenoAnimateMovement
   - type: XenoPlasma
     plasma: 400
@@ -62,7 +62,8 @@
       groups:
         Brute: 40
   - type: CrusherShield
-  - type: Tackle
+  - type: XenoShield
+  - type: Tackle # min: 2, max: 6
     threshold: 5
     stun: 5
     chance: 0.25

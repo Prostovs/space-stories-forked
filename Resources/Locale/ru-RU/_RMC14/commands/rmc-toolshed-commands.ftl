@@ -1,3 +1,6 @@
+command-description-bioscan-marine = Manually triggers an ARES bioscan to announce to marines where xenos are and how many are left.
+command-description-bioscan-xeno = Manually triggers a Queen Mother bioscan to announce to xenos where marines are and how many are left.
+command-description-bioscan-all = Manually triggers an ARES and Queen Mother bioscans to announce to both xenos and marines where each other are and how many are left.
 command-description-vendorpoints-get = Получает очки, которые у морского пехотинца остались для покупки предметов у автоматического продавца.
 command-description-vendorpoints-getspecialist = Получает очки, оставшиеся у специалиста по оружию для покупки предметов на стойке снаряжения.
 command-description-vendorpoints-set = Устанавливает количество очков, за которые морпех или группа морпехов могут приобрести предметы у автоматического торговца.
@@ -16,6 +19,7 @@ command-description-marine-randomizewithjob = Удаляет, а затем по
 command-description-removeinvalidweeds = Удаляет с карты все сорняки, которые не должны были нормально распространиться.
 command-description-skills-get = Получает уровень определенного навыка для морпеха.
 command-description-skills-set = Устанавливает уровень определенного навыка для морпеха или группы морпехов.
+command-description-skills-all = Устанавливает уровень всех навыков для морпеха или группы морпехов.
 command-description-squad-get = Получает идентификатор отряда морпеха.
 command-description-squad-getname = Получает название отряда морпеха.
 command-description-squad-set = Задает отряд морпеха или группы морпехов.
