@@ -119,6 +119,8 @@
 - type: entity
   parent: CMWallReinforced
   id: CMWallReinforcedAlmayer
+  name: reinforced hull
+  description: A reinforced metal wall used to separate rooms and make up the ship.
   components:
   - type: Sprite
     sprite: _RMC14/Structures/Walls/almayer_black.rsi
@@ -133,6 +135,8 @@
 - type: entity
   parent: CMWallReinforced
   id: CMWallReinforcedAlmayerWhite
+  name: reinforced hull
+  description: A reinforced metal wall used to separate rooms and make up the ship.
   components:
   - type: Sprite
     sprite: _RMC14/Structures/Walls/almayer_white.rsi
@@ -143,6 +147,21 @@
     key: walls
     keyTwo: window
     base: wall
+
+- type: entity
+  parent: CMWallReinforced
+  id: CMWallReinforcedAlmayerAI
+  name: reinforced hull
+  description: A reinforced metal wall used to isolate potentially dangerous areas.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Structures/Walls/almayer_aicore.rsi
+  - type: Icon
+    sprite: _RMC14/Structures/Walls/almayer_aicore.rsi
+    state: reinforced
+  - type: IconSmooth
+    key: walls
+    base: aiwall
 
 # Indestructible
 - type: entity
@@ -166,6 +185,8 @@
 - type: entity
   parent: CMWallReinforcedHeavy
   id: CMWallReinforcedHeavyAlmayer
+  name: heavy reinforced hull
+  description: A highly reinforced metal wall used to separate rooms and make up the ship. It would take a great impact to weaken this wall.
   components:
   - type: Sprite
     sprite: _RMC14/Structures/Walls/almayer_black.rsi
@@ -180,7 +201,8 @@
 - type: entity
   parent: CMWallReinforcedHeavy
   id: CMWallReinforcedHeavyAlmayerWhite
-  name: ultra reinforced hull
+  name: heavy reinforced hull
+  description: A highly reinforced metal wall used to separate rooms and make up the ship. It would take a great impact to weaken this wall.
   components:
   - type: Sprite
     sprite: _RMC14/Structures/Walls/almayer_white.rsi
@@ -191,6 +213,21 @@
     key: walls
     keyTwo: window
     base: wall
+
+- type: entity
+  parent: CMWallReinforcedHeavy
+  id: CMWallReinforcedHeavyAlmayerAI
+  name: heavy reinforced hull
+  description: An extremely reinforced metal wall used to isolate potentially dangerous areas. Looks virtually indestructible.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Structures/Walls/almayer_aicore.rsi
+  - type: Icon
+    sprite: _RMC14/Structures/Walls/almayer_aicore.rsi
+    state: hull
+  - type: IconSmooth
+    key: walls
+    base: aiwall
 
 # TODO RMC14 temp hull, breakable only after hijack
 

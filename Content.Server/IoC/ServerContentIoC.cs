@@ -1,6 +1,5 @@
 using Content.Server._RMC14.Discord;
 using Content.Server._RMC14.LinkAccount;
-using Content.Server._RMC14.Mapping;
 using Content.Server._RMC14.PlayTimeTracking;
 using Content.Server._Stories.DiscordAuth;
 using Content.Server._Stories.JoinQueue;
@@ -18,6 +17,7 @@ using Content.Server.Discord;
 using Content.Server.EUI;
 using Content.Server.GhostKick;
 using Content.Server.Info;
+using Content.Server.Mapping;
 using Content.Server.Maps;
 using Content.Server.MoMMI;
 using Content.Server.NodeContainer.NodeGroups;
@@ -77,9 +77,9 @@ namespace Content.Server.IoC
             IoCManager.Register<ServerApi>();
             IoCManager.Register<JobWhitelistManager>();
             IoCManager.Register<PlayerRateLimitManager>();
+            IoCManager.Register<MappingManager>();
 
             // RMC14
-            IoCManager.Register<MappingManager>();
             IoCManager.Register<LinkAccountManager>();
             IoCManager.Register<RMCPlayTimeManager>();
             IoCManager.Register<RMCDiscordManager>();

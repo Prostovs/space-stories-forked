@@ -20,7 +20,7 @@ public sealed partial class VoiceMaskNameChangeWindow : FancyWindow
 
     private string? _verb;
 
-    public VoiceMaskNameChangeWindow(IPrototypeManager proto)
+    public VoiceMaskNameChangeWindow()
     {
         RobustXamlLoader.Load(this);
 
@@ -34,14 +34,12 @@ public sealed partial class VoiceMaskNameChangeWindow : FancyWindow
             OnVerbChange?.Invoke((string?) args.Button.GetItemMetadata(args.Id));
             SpeechVerbSelector.SelectId(args.Id);
         };
-
-        ReloadVerbs(proto);
-        ReloadVoices(proto); // Stories-TTS
+		ReloadVoices(proto); // Stories-TTS
 
         AddVerbs();
     }
 
-    private void ReloadVerbs(IPrototypeManager proto)
+    public void ReloadVerbs(IPrototypeManager proto)
     {
         foreach (var verb in proto.EnumeratePrototypes<SpeechVerbPrototype>())
         {

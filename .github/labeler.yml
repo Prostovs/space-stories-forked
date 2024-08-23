@@ -12,6 +12,10 @@
 - changed-files:
   - any-glob-to-any-file: '**/*.xaml*'
 
+"Changes: Shaders":
+- changed-files:
+  - any-glob-to-any-file: '**/*.swsl'
+
 "Changes: Localization":
 - changed-files:
   - any-glob-to-any-file: 'Resources/Locale/**/*.ftl'
