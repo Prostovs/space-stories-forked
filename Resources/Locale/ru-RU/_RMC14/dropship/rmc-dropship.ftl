@@ -30,6 +30,7 @@ rmc-dropship-weapons-offset-calibration = Калибровка смещения
 rmc-dropship-weapons-fire = ОГОНЬ
 rmc-dropship-weapons-strike = УДАР
 rmc-dropship-weapons-vector = ВЕКТРО
+rmc-dropship-weapons-offset-calibration-does-not-affect-direct-bombardment = Не влияет на прямую бомбардировку!
 rmc-dropship-weapons-night-vision-on = НВ-ВКЛ
 rmc-dropship-weapons-night-vision-off = НВ-ВЫКЛ
 rmc-dropship-weapons-weapon = ОРУДИЕ

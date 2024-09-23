@@ -11,3 +11,6 @@ rmc-xeno-egg-fail-return = Это яйцо не может вместить эт
 rmc-xeno-egg-return-user = Мы помещаем ребенка обратно в яйцо.
 rmc-xeno-egg-return-self = { CAPITALIZE($parasite) } заползает обратно в яйцо.
 rmc-xeno-egg-return = { CAPITALIZE($user) } задвигает { $parasite } обратно в яйцо.
+rmc-xeno-egg-ghost-verb = Стать лицехватом
+rmc-xeno-egg-ghost-need-time = Вы стали призраком слишком недавно. Вы не можете стать лицехватом, пока не пройдет 3 минуты.
+rmc-xeno-egg-ghost-confirm = Вы уверены, что хотите стать лицехватом?

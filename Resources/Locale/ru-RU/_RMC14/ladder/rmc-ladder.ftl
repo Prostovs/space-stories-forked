@@ -4,3 +4,4 @@ rmc-ladder-start-climbing-others = { $user } начинает поднимать
 rmc-ladder-finish-climbing-self = Вы поднимаетесь по лестнице.
 rmc-ladder-finish-climbing-others = { $user } поднимается по лестнице.
 rmc-ladder-someone-else-climbing = Сейчас лестницей пользуется кто-то другой.
+rmc-ladder-look-through = Просматреть

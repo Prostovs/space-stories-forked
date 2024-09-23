@@ -19,6 +19,9 @@ cm-distress-signal-alldied =
 cm-distress-signal-statistic =
     Было { $marines } морпехов, из которых выжило { $marinesAlive }.
     Было { $xenos } ксеноморфов, из которых выжило { $xenosAlive }.
+rmc-distress-signal-next-map-title = Следующая карта планеты
+rmc-distress-signal-next-map-tie = Ничья при голосовании за карту! Выбираем... { $picked }
+rmc-distress-signal-next-map-win = { $winner } выиграла в голосование за карту!
 cm-distress-signal-discord-none = Раунд был завершён досрочно
 cm-distress-signal-discord-majormarinevictory = Крупная победа морпехов
 cm-distress-signal-discord-minormarinevictory = Малая победа морпехов

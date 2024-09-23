@@ -1,0 +1,14 @@
+ent-RMCScabbardBase = основание ножен
+    .desc = -- вставьте описание здесь --
+ent-RMCScabbardMachete = ножны для мачете H5 образца M2132
+    .desc = Большие кожаные ножны для ношения мачете M2132. Его можно пристегнуть к спине или к поясу.
+ent-RMCScabbardMacheteFilled = { ent-RMCScabbardMachete }
+    .suffix = Заполненный
+    .desc = { ent-RMCScabbardMachete.desc }
+ent-RMCScabbardMacheteSG = ножны для мачете с ремнями ML66A
+    .desc = Ножны, присоединяемые к боевому ремню ML66A, для ношения мачете M2132.
+ent-RMCScabbardMacheteSGFilled = { ent-RMCScabbardMacheteSG }
+    .suffix = Заполненный
+    .desc = { ent-RMCScabbardMacheteSG.desc }
+ent-RMCScabbardShotgun = ножны для ружья L44 M42A2
+    .desc = Большая кожаная кобура, предназначенная для ружей, выдаваемых UNMC. Имеет ремни, позволяющие закрепить ее на спине для удобства хранения.

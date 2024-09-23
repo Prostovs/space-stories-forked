@@ -5,3 +5,4 @@ cm-action-popup-scoping-user-must-not-pulled = Вы не можете испол
 cm-action-popup-scoping-user-must-not-contained = Вы не можете использовать оптику { $scope }, находясь в контейнере!
 cm-action-popup-scoping-user-must-wield = Вы должны держать { THE($scope) } двумя руками, чтобы использовать прицел.
 cm-action-popup-scoping-must-attach = { CAPITALIZE(THE($scope)) } должен быть прикреплен к оружию, чтобы функционировать!
+rcm-action-popup-scope-cycle-zoom = Уровень увеличения изменился на { $zoom }.

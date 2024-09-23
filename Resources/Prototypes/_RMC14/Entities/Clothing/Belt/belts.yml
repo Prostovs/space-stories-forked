@@ -275,7 +275,7 @@
     whitelist:
       tags:
       - CMMagazinePistol
-      - CMMagazineRevolver
+      - RMCMagazineRevolver
       - CMMagazineRifle
       - CMMagazineSmg
       - CMMagazineSniper

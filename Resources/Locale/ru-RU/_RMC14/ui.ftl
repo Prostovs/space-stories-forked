@@ -22,25 +22,26 @@ rmc-ui-named-items-displayed-as =
     Убедитесь, что выбранное вами имя не нарушает правил.
     Если вы не уверены, спросите в AHelp! (F1)
 rmc-ui-named-primary-gun = Название основного оружия
-rmc-ui-named-sidearm = Название оружия
+rmc-ui-named-sidearm = Название вторичного оружия
 rmc-ui-named-helmet = Название шлема
 rmc-ui-named-armor = Название брони
-rmc-ui-patron-perks = Привилегии покровителя
+rmc-ui-named-sentry = Название турели
+rmc-ui-patron-perks = Привилегии спонсора
 rmc-ui-lobby-message = Сообщение в лобби
 rmc-ui-lobby-message-description =
     Отображается у игроков перед началом игры.
-    Один выбирается случайным образом между всеми Покровителями этого уровня.
+    Один выбирается случайным образом между всеми спонсорами.
     Убедитесь, что выбранное вами сообщение не нарушает правил.
     Если вы не уверены, спросите в AHelp! (F1)
 rmc-ui-shoutout = Окончание раунда
-rmc-ui-shoutout-marine-title = Имя, которое будет использоваться для морского крика в конце раунда.
-rmc-ui-shoutout-marine-description = Отображается в конце раунда в качестве спонсора.
-rmc-ui-shoutout-xeno-title = Имя, которое будет использоваться для крика ксеносов в конце раунда.
-rmc-ui-shoutout-xeno-description = Отображается на круглом конце как основатель улья.
+rmc-ui-shoutout-marine-title = Имя, которое будет использоваться в конце раунда.
+rmc-ui-shoutout-marine-description = Отображается в конце раунда в качестве спонсора опреации.
+rmc-ui-shoutout-xeno-title = Имя, которое будет использоваться в конце раунда.
+rmc-ui-shoutout-xeno-description = Отображается в конце раунда как основатель улья.
 rmc-ui-shoutout-example = Пример:
 rmc-ui-shoutout-info =
-    Каждое имя выбирается случайным образом среди всех Покровителей этого яруса.
-    Убедитесь, что выбранные вами имена соответствуют характеру и не нарушают правил.
+    Каждое имя выбирается случайным образом среди всех спонсоров.
+    Убедитесь, что выбранные вами имена соответствуют персонажу и не нарушают правил.
     Если вы не уверены, спросите в AHelp! (F1)
 rmc-ui-named-items-in-preferences = Вы можете изменить названия предметов для каждого персонажа в настройках персонажа.
 rmc-ui-figurine = Фигурка персонажа
@@ -49,8 +50,8 @@ rmc-ui-figurine-in-preferences =
     Ограничение - одна активная фигурка на человека!
     Если вы хотите изменить свой, сообщите нам об этом в Discord.
 rmc-ui-shoutout-marine = [bold]Операция финансируется [color=green]{ $name }[/color]![/bold]
-rmc-ui-shoutout-xeno = [bold]Улей, созданный [color=purple]{ $name }[/color]![/bold]
-rmc-ui-discord = Discord
-rmc-ui-patreon = Patreon
+rmc-ui-shoutout-xeno = [bold]Улей, основаный [color=purple]{ $name }[/color]![/bold]
+rmc-ui-discord = Дискорд
+rmc-ui-patreon = Boosty
 cm-ui-audio-humanoid-voicelines = Воспроизводить голоса
 cm-ui-roadmap = Дорожная карта
