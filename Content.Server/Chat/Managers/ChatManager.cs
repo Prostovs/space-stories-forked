@@ -260,7 +260,8 @@ internal sealed partial class ChatManager : IChatManager
         if (_netConfigManager.GetClientCVar(player.Channel, CCVars.ShowOocPatronColor) &&
             _linkAccount.GetPatron(player)?.Tier != null)
         {
-            wrappedMessage = Loc.GetString("chat-manager-send-ooc-patron-wrap-message", ("patronColor", "#aa00ff"),("playerName", player.Name), ("message", FormattedMessage.EscapeText(message)));
+            var color = _linkAccount.GetPatronOOCHexColor(player.Channel.UserId);
+            wrappedMessage = Loc.GetString("chat-manager-send-ooc-patron-wrap-message", ("patronColor", $"{color}"),("playerName", player.Name), ("message", FormattedMessage.EscapeText(message)));
         }
         // Stories-Sponsors-OOC-Start
         if (_sponsors.TryGetInfo(player.UserId, out var info) && info.OOCColor != null)

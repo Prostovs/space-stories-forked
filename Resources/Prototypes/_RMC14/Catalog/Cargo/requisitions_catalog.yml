@@ -203,6 +203,8 @@
       entries:
       - cost: 3000
         crate: RMCCrateResearchPhoron
+      - cost: 2000
+        crate: RMCCrateResearchPlastic
     - name: Restricted Equipment
       entries:
       - cost: 2000
