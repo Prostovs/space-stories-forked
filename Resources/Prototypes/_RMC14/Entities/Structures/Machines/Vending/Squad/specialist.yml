@@ -45,7 +45,7 @@
         points: 40
       - id: CMMagazineSniperM96S
         points: 40
-      - id: CMMagazineSniperXM43E1AntiMateriel
+      - id: CMMagazineSniperM96SAntiMateriel
         points: 30
     - name: Extra Demolitionist Ammunition
       entries:
@@ -124,8 +124,8 @@
     #- id: CMM276M63HolsterRig
     #- id: CMM276M44HolsterRig
     #- id: CMM276M82FHolsterRig
-    #- id: CMM276ShotgunShellLoadingRig
-    - name: подсумок
+      - id: RMCM276ShotgunShellLoadingRig
+    - name: Pouches
       choices: { RMCPouch: 2 }
       entries:
       - id: RMCPouchFirstAidInjectors

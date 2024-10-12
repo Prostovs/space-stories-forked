@@ -49,7 +49,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: CMMagazineSniperXM43E1AntiMateriel
+    - id: CMMagazineSniperM96SAntiMateriel
       amount: 5
 
 - type: entity
