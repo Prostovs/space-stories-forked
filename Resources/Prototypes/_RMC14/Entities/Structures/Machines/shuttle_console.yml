@@ -96,6 +96,7 @@
     state: green
   - type: FTLBeacon
   - type: DropshipDestination
+  - type: FTLSmashImmune
 
 - type: entity
   parent: MarkerBase
@@ -109,3 +110,4 @@
     state: green
   - type: FTLBeacon
   - type: DropshipHijackDestination
+  - type: FTLSmashImmune

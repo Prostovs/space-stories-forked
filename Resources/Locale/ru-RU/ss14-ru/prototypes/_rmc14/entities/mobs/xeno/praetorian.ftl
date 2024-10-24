@@ -1,5 +1,5 @@
-ent-CMXenoPraetorianBase = Praetorian
-    .desc = A huge, looming beast of an alien.
+ent-CMXenoPraetorianBase = Преторианец
+    .desc = Огромное, грозное чудище.
 ent-CMXenoPraetorian = Преторианец
     .desc = Огромное, грозное чудище.
 ent-RMCXenoPraetorianWarden = { ent-CMXenoPraetorianBase }
