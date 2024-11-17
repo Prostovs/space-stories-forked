@@ -42,6 +42,7 @@
   description: A special headset used by corporate personnel.
   components:
   - type: GrantSquadLeaderTracker
+  - type: GrantMarineIcons # Stoires-Fixes
   - type: Sprite
     sprite: _RMC14/Objects/Clothing/headsets.rsi
     state: pmc_headset
