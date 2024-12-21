@@ -54,9 +54,6 @@
     - ActionXenoManageHive
 #    - ActionXenoRoyalJelly
 #    - ActionXenoMarkResin
-    # Mature
-#    - ActionXenoSpit
-#    - ActionXenoToggleSpitType
     tier: 0
     bypassTierCount: true
     unlockAt: 0
@@ -175,8 +172,11 @@
     deadThreshold: 1100
     addComponents:
     - type: XenoScreech
+    - type: XenoToggleSpit
     addActions:
     - ActionXenoScreech
+    - ActionXenoSpitQueen
+    - ActionXenoToggleSpitType
   - type: RMCSize
     size: Immobile
   - type: RMCXenoDamageVisuals
@@ -209,6 +209,9 @@
   - type: XenoHeal
   - type: StunOnExplosionReceived
     weak: false
+  - type: XenoSpit
+    projectileId: XenoQueenNeuroSpitProjectile
+    plasmaCost: 50
 
 - type: entity
   id: XenoLeaderPheromoneRelay

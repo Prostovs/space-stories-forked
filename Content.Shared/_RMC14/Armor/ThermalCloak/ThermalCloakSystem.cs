@@ -8,7 +8,9 @@ using Content.Shared._RMC14.Xenonids.Projectile;
 using Content.Shared._Stories.AntiGrief.Cadet;
 using Content.Shared.Actions;
 using Content.Shared.Coordinates;
+using Content.Shared.Explosion.Components;
 using Content.Shared.Explosion.Components.OnTrigger;
+using Content.Shared.Explosion.EntitySystems;
 using Content.Shared.Humanoid;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Inventory;
@@ -55,7 +57,7 @@ public sealed class ThermalCloakSystem : EntitySystem
         SubscribeLocalEvent<EntityActiveInvisibleComponent, XenoParasiteInfectEvent>(OnParasiteInfect);
 
         SubscribeLocalEvent<GunComponent, AttemptShootEvent>(OnAttemptShoot);
-        SubscribeLocalEvent<ExplodeOnTriggerComponent, UseInHandEvent>(OnTimerUse);
+        SubscribeLocalEvent<CancelUseWithCloakComponent, UseInHandEvent>(OnTimerUse, before: [typeof(SharedTriggerSystem)]);
         SubscribeLocalEvent<UncloakOnHitComponent, ProjectileHitEvent>(OnAcidProjectile);
     }
 
@@ -225,7 +227,7 @@ public sealed class ThermalCloakSystem : EntitySystem
         }
     }
 
-    private void OnTimerUse(Entity<ExplodeOnTriggerComponent> ent, ref UseInHandEvent args)
+    private void OnTimerUse(Entity<CancelUseWithCloakComponent> ent, ref UseInHandEvent args)
     {
         // Stories-AntiGrief-Start
         if (HasComp<CadetComponent>(args.User))
@@ -244,7 +246,7 @@ public sealed class ThermalCloakSystem : EntitySystem
         {
             args.Handled = true;
 
-            var popup = Loc.GetString("rmc-cloak-attempt-prime");
+            var popup = Loc.GetString(ent.Comp.CancelMessage);
             _popup.PopupClient(popup, args.User, args.User, PopupType.SmallCaution);
         }
     }
