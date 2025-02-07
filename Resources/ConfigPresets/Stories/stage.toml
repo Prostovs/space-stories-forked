@@ -2,16 +2,17 @@
 # Загружается перед настройками конфигурации, специфичными для сервера.
 
 # [config]
-# presets = "Stories/mappers"
+# presets = "Stories/stage"
+
+[admin]
+admins_count_in_playercount = true
+deadmin_on_join = false
 
 [adminlogs]
 enabled = false
 
-[admin]
-deadmin_on_join = false
-
 [game]
-hostname = "📚 Space Stories - Colonial Marines Stage ⚙ [TTS]"
+hostname = "📚 Space Stories - Colonial Marines Stage ⚙"
 desc = """
                                                             📕 𝗦𝗽𝗮𝗰𝗲 𝗦𝘁𝗼𝗿𝗶𝗲𝘀 - Colonial Marines! ⚙
 •────────────────────────────────── ✧ ──────────────────────────────────•
@@ -24,11 +25,8 @@ soft_max_players = 10
 role_timers = false
 role_whitelist = false
 
-[rules]
-time = 0.0
-
-[hub]
-server_url = "ss14s://spacestories.club/stage-cm"
-
 [whitelist]
 enabled = true
+
+[rules]
+time = 0.0
