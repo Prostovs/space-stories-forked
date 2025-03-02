@@ -72,7 +72,9 @@
     - XenoFastResin
     canOrderConstruction:
     - HiveCoreXenoConstructionNode
+    - HiveEggMorpherXenoConstructionNode
     - HiveClusterXenoConstructionNode
+    - HiveRecoveryNodeXenoConstructionNode
   - type: XenoDevour
   - type: XenoPheromones
     pheromonesMultiplier: 4
