@@ -118118,182 +118118,182 @@ entities:
   - uid: 17039
     components:
     - type: MetaData
-      name: LZ1
+      name: ЗП1
     - type: Transform
       pos: 23.5,32.5
       parent: 1
   - uid: 17040
     components:
     - type: MetaData
-      name: Warehouse
+      name: Склад
     - type: Transform
       pos: 55.5,19.5
       parent: 1
   - uid: 17041
     components:
     - type: MetaData
-      name: North Aerodrome Hangar
+      name: Северный ангар аэродрома
     - type: Transform
       pos: 56.5,48.5
       parent: 1
   - uid: 17042
     components:
     - type: MetaData
-      name: Cave Camp
+      name: Лагерь в пещере
     - type: Transform
       pos: 65.5,89.5
       parent: 1
   - uid: 17043
     components:
     - type: MetaData
-      name: LZ2
+      name: ЗП2
     - type: Transform
       pos: 22.5,139.5
       parent: 1
   - uid: 17044
     components:
     - type: MetaData
-      name: Auxiliary Generator Station
+      name: Вспомогательная генераторная станция
     - type: Transform
       pos: 57.5,146.5
       parent: 1
   - uid: 17045
     components:
     - type: MetaData
-      name: Botany
+      name: Ботаника
     - type: Transform
       pos: 106.5,96.5
       parent: 1
   - uid: 17046
     components:
     - type: MetaData
-      name: Colony Administration
+      name: Администрация колонии
     - type: Transform
       pos: 107.5,79.5
       parent: 1
   - uid: 17047
     components:
     - type: MetaData
-      name: Panic Room
+      name: Паническая комната
     - type: Transform
       pos: 105.5,69.5
       parent: 1
   - uid: 17048
     components:
     - type: MetaData
-      name: Anti-Freeze Bar
+      name: Антифриз Бар
     - type: Transform
       pos: 114.5,54.5
       parent: 1
   - uid: 17049
     components:
     - type: MetaData
-      name: Junk Yard
+      name: Свалка
     - type: Transform
       pos: 120.5,36.5
       parent: 1
   - uid: 17050
     components:
     - type: MetaData
-      name: Junk Yard
+      name: Свалка
     - type: Transform
       pos: 103.5,15.5
       parent: 1
   - uid: 17051
     components:
     - type: MetaData
-      name: Fort Biceps
+      name: Форт Бицепс
     - type: Transform
       pos: 128.5,17.5
       parent: 1
   - uid: 17052
     components:
     - type: MetaData
-      name: Research Habitation
+      name: Среда обитания
     - type: Transform
       pos: 182.5,38.5
       parent: 1
   - uid: 17053
     components:
     - type: MetaData
-      name: Research Hab Interior
+      name: Интерьер среды обитания
     - type: Transform
       pos: 196.5,14.5
       parent: 1
   - uid: 17054
     components:
     - type: MetaData
-      name: Disposals
+      name: Утилизация
     - type: Transform
       pos: 197.5,89.5
       parent: 1
   - uid: 17055
     components:
     - type: MetaData
-      name: Colony Garage
+      name: Гараж колонии
     - type: Transform
       pos: 151.5,82.5
       parent: 1
   - uid: 17056
     components:
     - type: MetaData
-      name: Command Centre
+      name: Командный центр
     - type: Transform
       pos: 116.5,119.5
       parent: 1
   - uid: 17057
     components:
     - type: MetaData
-      name: Church
+      name: Церковь
     - type: Transform
       pos: 116.5,133.5
       parent: 1
   - uid: 17058
     components:
     - type: MetaData
-      name: Morgue
+      name: Морг
     - type: Transform
       pos: 127.5,137.5
       parent: 1
   - uid: 17059
     components:
     - type: MetaData
-      name: Canteen
+      name: Столовая
     - type: Transform
       pos: 139.5,142.5
       parent: 1
   - uid: 17060
     components:
     - type: MetaData
-      name: B-Ball Court
+      name: Баскетбольная площадка
     - type: Transform
       pos: 135.5,148.5
       parent: 1
   - uid: 17061
     components:
     - type: MetaData
-      name: Security
+      name: Безопасность
     - type: Transform
       pos: 156.5,132.5
       parent: 1
   - uid: 17062
     components:
     - type: MetaData
-      name: Power Substation
+      name: Силовая подстанция
     - type: Transform
       pos: 180.5,138.5
       parent: 1
   - uid: 17063
     components:
     - type: MetaData
-      name: Underground Security Armory
+      name: Подземная оружейная безопасности
     - type: Transform
       pos: 170.5,153.5
       parent: 1
   - uid: 17064
     components:
     - type: MetaData
-      name: Aurora Medical Clinic
+      name: Медицинская клиника "Аврора"
     - type: Transform
       pos: 194.5,146.5
       parent: 1
