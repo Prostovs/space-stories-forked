@@ -14,6 +14,8 @@
     name: cm-job-name-xeno-runner
   - type: Sprite
     sprite: _Stories/Mobs/Xenos/Runner/runner.rsi
+  - type: Eye
+    pvsScale: 1.5
   - type: MobState
     allowedStates:
     - Alive
