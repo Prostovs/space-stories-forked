@@ -64,6 +64,7 @@
   - type: XenoHeavy
   - type: XenoAcid
   - type: XenoConstruction
+    buildDelay: 2
     canBuild:
     - WallXenoResin
     - WallXenoMembrane
