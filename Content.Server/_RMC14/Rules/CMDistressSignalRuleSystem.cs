@@ -34,6 +34,7 @@ using Content.Shared._RMC14.Bioscan;
 using Content.Shared._RMC14.CameraShake;
 using Content.Shared._RMC14.CCVar;
 using Content.Shared._RMC14.Dropship;
+using Content.Shared._RMC14.Intel;
 using Content.Shared._RMC14.Item;
 using Content.Shared._RMC14.Map;
 using Content.Shared._RMC14.Marines;
@@ -68,6 +69,7 @@ using Content.Shared.Nutrition.EntitySystems;
 using Content.Shared.Preferences;
 using Content.Shared.Roles;
 using Content.Shared.StatusEffect;
+using Content.Shared.Destructible;
 using Content.Shared.Roles.Jobs;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Ghost;
@@ -85,6 +87,8 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
+using Content.Shared._RMC14.Xenonids.Construction;
+using Content.Shared._RMC14.Xenonids.Hive;
 
 namespace Content.Server._RMC14.Rules;
 
@@ -138,6 +142,9 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
     [Dependency] private readonly ThermalCloakSystem _thermalCloak = default!;
     [Dependency] private readonly SharedGhillieSuitSystem _ghillieSuit = default!;
     [Dependency] private readonly MapInsertSystem _mapInsert = default!;
+    [Dependency] private readonly SharedDestructibleSystem _destruction = default!;
+    [Dependency] private readonly IntelSystem _intel = default!;
+
 
     private readonly HashSet<string> _operationNames = new();
     private readonly HashSet<string> _operationPrefixes = new();
@@ -190,6 +197,7 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
             before: [typeof(ArrivalsSystem), typeof(SpawnPointSystem)]);
         SubscribeLocalEvent<RoundEndMessageEvent>(OnRoundEndMessage);
         SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestartCleanup);
+        SubscribeLocalEvent<DropshipHijackStartEvent>(OnDropshipHijackStart);
         SubscribeLocalEvent<DropshipHijackLandedEvent>(OnDropshipHijackLanded);
 
         SubscribeLocalEvent<MarineComponent, MobStateChangedEvent>(OnMobStateChanged);
@@ -248,6 +256,8 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
                 // TODO: how should the gamemode handle failure? restart immediately or create an alert for admins
                 continue;
             }
+
+            _intel.RunSpawners();
 
             SetFriendlyHives(comp.Hive);
 
@@ -738,6 +748,24 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
         }
     }
 
+    private void OnDropshipHijackStart(ref DropshipHijackStartEvent ev)
+    {
+        var hiveStructures = EntityQueryEnumerator<HiveConstructionLimitedComponent, TransformComponent>();
+        while (hiveStructures.MoveNext(out var hiveStructure, out _, out var transformComp))
+        {
+            if (transformComp.ParentUid != ev.Dropship && _rmcPlanet.IsOnPlanet(hiveStructure.ToCoordinates()))
+            {
+                _destruction.DestroyEntity(hiveStructure);
+            }
+        }
+        var rules = QueryActiveRules();
+        while (rules.MoveNext(out _, out var rule, out _))
+        {
+            // Reset Hivecore Cooldown
+            var hiveComp = EnsureComp<HiveComponent>(rule.Hive);
+            _hive.ResetHiveCoreCooldown((rule.Hive, hiveComp));
+        }
+    }
     private void OnDropshipHijackLanded(ref DropshipHijackLandedEvent ev)
     {
         var rules = QueryActiveRules();

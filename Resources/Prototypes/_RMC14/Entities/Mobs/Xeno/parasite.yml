@@ -106,6 +106,8 @@
     downSound: null
   - type: XenoInhandSprite
     stateName: parasite
+  - type: RMCBuckleOffset
+    offset: 0, 0
   - type: AutoClimbBlocked # Stories-AutoClimb
   
 - type: entity

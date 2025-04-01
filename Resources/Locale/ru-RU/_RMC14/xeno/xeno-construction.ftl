@@ -12,6 +12,7 @@ rmc-xeno-construction-no-map-resin-hole = Земля не твердая
 rmc-xeno-construction-must-have-weeds-resin-hole = Отверстия в смоле должны быть построены на сорняках.
 rmc-xeno-construction-blocked-resin-hole = Здесь уже что-то построено.
 rmc-xeno-construction-similar-too-close-resin-hole = Поблизости есть и другие смоляные отверстия!
+rmc-xeno-construction-dead-body = Тело на пути!
 rmc-xeno-construction-structure-destroyed = Строение { $structureName } было { $destructionVerb } в { $location }!
 rmc-xeno-construction-resin-hole-destroyed = Мы чувствуем, что одна из ловушек нашего улья { $structureName } в { $location } была { $destructionVerb }!
 cm-xeno-construction-resin-hole-full = В смоляной ловушке уже что-то есть!

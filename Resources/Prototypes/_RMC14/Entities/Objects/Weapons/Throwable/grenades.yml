@@ -88,6 +88,12 @@
   - type: CMExplosionEffect
   - type: CMVocalizeTrigger
   - type: RMCScorchEffect
+  - type: Tag
+    tags:
+    - Grenade
+    - LauncherCompatibleGrenade
+    - RMCGrenadeM40
+    - RMCGrenadeHEDP
 
 - type: entity
   parent:
@@ -180,6 +186,12 @@
     maxShrapnel: 0
   - type: CMVocalizeTrigger
   - type: RMCScorchEffect
+  - type: Tag
+    tags:
+    - Grenade
+    - LauncherCompatibleGrenade
+    - RMCGrenadeM40
+    - RMCGrenadeHEFA
 
 - type: entity
   parent: CMGrenadeHighExplosive
@@ -348,6 +360,12 @@
   components:
   - type: Sprite
     state: shrapnel_bright2
+
+- type: Tag
+  id: RMCGrenadeHEDP
+
+- type: Tag
+  id: RMCGrenadeHEFA
 
 - type: Tag
   id: RMCGrenadeM40
