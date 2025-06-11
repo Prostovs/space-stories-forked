@@ -38,3 +38,6 @@ ent-RMCJumpsuitCivilianJanitor = комбинезон уборщика
     .desc = Это официальная униформа уборщика колонии.
 ent-RMCJumpsuitCLFSoldier = униформа колониального освободительного фронта
     .desc = Стильный серо-зеленый комбинезон - стандартная форма для колонистов. На этой версии в отдельных местах вышит символ Колониального фронта освобождения.
+ent-RMCJumpsuitCLFWebbing = { ent-RMCJumpsuitCLFSoldier }
+    .suffix = Разгрузка
+    .desc = { ent-RMCJumpsuitCLFSoldier.desc }

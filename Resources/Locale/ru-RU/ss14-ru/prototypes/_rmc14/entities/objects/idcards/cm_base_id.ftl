@@ -1,5 +1,7 @@
 ent-CMIDCardStandardDogtag = жетон
     .desc = Содержит информацию о своем носителе и предоставляет доступ на корабль.
+ent-RMCInformationDogtagProp = потёртый информационный жетон
+    .desc = Информационный жетон павшего морпеха. Выглядит потрепанным, имя стерлось.
 ent-RMCInformationDogtag = информационный жетон
     .desc = Информационный жетон погибшего морского пехотинца.
 ent-RMCDogtagProp = жетон
@@ -15,4 +17,6 @@ ent-CMIDCardLanyard = идентификационный голо-знак
 ent-FactionMarine = { "" }
     .desc = { "" }
 ent-FactionSurvivor = { "" }
+    .desc = { "" }
+ent-FactionTSE = { "" }
     .desc = { "" }

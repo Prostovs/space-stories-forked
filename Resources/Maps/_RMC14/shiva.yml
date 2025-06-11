@@ -129,7 +129,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: LV-631 (Галлилео 57)
+      name: Снежный Шар Шивы
     - type: Transform
     - type: Map
       mapPaused: True
@@ -42825,7 +42825,7 @@ entities:
   - uid: 1198
     components:
     - type: MetaData
-      name: 'ЗП1: Зона Посадки "Юг"'
+      name: 'ЗП1: Зона Посадки'
     - type: Transform
       pos: 23.5,32.5
       parent: 1
@@ -113761,7 +113761,7 @@ entities:
   - uid: 14390
     components:
     - type: MetaData
-      name: ЗП1
+      name: ЗП-1
     - type: Transform
       pos: 23.5,32.5
       parent: 1
@@ -113775,28 +113775,28 @@ entities:
   - uid: 14392
     components:
     - type: MetaData
-      name: Северный ангар аэродрома
+      name: Северный Ангар
     - type: Transform
       pos: 56.5,48.5
       parent: 1
   - uid: 14393
     components:
     - type: MetaData
-      name: Лагерь в пещере
+      name: Пещерный Лагерь
     - type: Transform
       pos: 65.5,89.5
       parent: 1
   - uid: 14394
     components:
     - type: MetaData
-      name: ЗП2
+      name: ЗП-2
     - type: Transform
       pos: 22.5,139.5
       parent: 1
   - uid: 14395
     components:
     - type: MetaData
-      name: Вспомогательная генераторная станция
+      name: Резервный Генератор
     - type: Transform
       pos: 57.5,146.5
       parent: 1
@@ -113810,21 +113810,21 @@ entities:
   - uid: 14397
     components:
     - type: MetaData
-      name: Администрация колонии
+      name: Администрация
     - type: Transform
       pos: 107.5,79.5
       parent: 1
   - uid: 14398
     components:
     - type: MetaData
-      name: Паническая комната
+      name: Комната Паники
     - type: Transform
       pos: 105.5,69.5
       parent: 1
   - uid: 14399
     components:
     - type: MetaData
-      name: Антифриз Бар
+      name: Бар «Антифриз»
     - type: Transform
       pos: 114.5,54.5
       parent: 1
@@ -113845,21 +113845,21 @@ entities:
   - uid: 14402
     components:
     - type: MetaData
-      name: Форт Бицепс
+      name: Форт «Бицепс»
     - type: Transform
       pos: 128.5,17.5
       parent: 1
   - uid: 14403
     components:
     - type: MetaData
-      name: Среда обитания
+      name: Научный Корпус
     - type: Transform
       pos: 182.5,38.5
       parent: 1
   - uid: 14404
     components:
     - type: MetaData
-      name: Интерьер среды обитания
+      name: Жилой Отсек
     - type: Transform
       pos: 196.5,14.5
       parent: 1
@@ -113873,14 +113873,14 @@ entities:
   - uid: 14406
     components:
     - type: MetaData
-      name: Гараж колонии
+      name: Гараж Колонии
     - type: Transform
       pos: 151.5,82.5
       parent: 1
   - uid: 14407
     components:
     - type: MetaData
-      name: Командный центр
+      name: Командный Центр
     - type: Transform
       pos: 116.5,119.5
       parent: 1
@@ -113908,35 +113908,35 @@ entities:
   - uid: 14411
     components:
     - type: MetaData
-      name: Баскетбольная площадка
+      name: Баскетбольный Корт
     - type: Transform
       pos: 135.5,148.5
       parent: 1
   - uid: 14412
     components:
     - type: MetaData
-      name: Безопасность
+      name: Охрана
     - type: Transform
       pos: 156.5,132.5
       parent: 1
   - uid: 14413
     components:
     - type: MetaData
-      name: Силовая подстанция
+      name: Подстанция
     - type: Transform
       pos: 180.5,138.5
       parent: 1
   - uid: 14414
     components:
     - type: MetaData
-      name: Подземная оружейная безопасности
+      name: Подземная Оружейная
     - type: Transform
       pos: 170.5,153.5
       parent: 1
   - uid: 14415
     components:
     - type: MetaData
-      name: Медицинская клиника "Аврора"
+      name: Клиника «Аврора»
     - type: Transform
       pos: 194.5,146.5
       parent: 1

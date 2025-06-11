@@ -1,5 +1,3 @@
 ent-RMCRandomHumanoidCLFSoldier = роль солдата КОФ
-    .suffix = Роль
+    .suffix = Спавнер, Игрок
     .desc = { "" }
-ent-RMCIDCardCLFSoldier = ID карта солдата КОФ
-    .desc = { ent-CMIDCardBase.desc }

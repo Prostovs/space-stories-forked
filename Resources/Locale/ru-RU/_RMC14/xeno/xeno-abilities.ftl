@@ -314,6 +314,8 @@ rmc-xeno-eviscerate-windup-self = Мы готовимся к мощному уд
 rmc-xeno-eviscerate-windup = { $xeno } готовится к мощному удару!
 rmc-xeno-eviscerate-windup-small-self = Мы готовимся к удару!
 rmc-xeno-eviscerate-windup-small = { $xeno } готовится к удару!
+# Fling
+rmc-xeno-fling-too-big = { CAPITALIZE(THE($target)) } слишком велик, чтобы мы могли его метнуть!
 rmc-xeno-ravager-super-empower-fade = Наше свечение исчезает, сила покидает нашу форму!
 rmc-xeno-defensive-shield-activate-self = Мы прижимаемся к земле и укрепляем свою защиту!
 cm-xeno-plasma-transferred-to-self = { $target } передал вам { $plasma } плазмы. Теперь у вас есть { $total }

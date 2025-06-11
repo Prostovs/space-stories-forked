@@ -1117,7 +1117,7 @@
       sprite: _Stories/Actions/xeno_actions.rsi
       state: abduct
     event: !type:XenoAbductActionEvent
-    range: 7
+    range: 6
     useDelay: 15
     deselectOnMiss: false
     checkCanAccess: false
@@ -1238,6 +1238,8 @@
     checkCanAccess: false
     deselectOnMiss: false
   - type: ActionBlockIfResting
+  - type: ActionInRangeUnobstructed
+    range: 2.5
   - type: XenoOffensiveAction
 
 - type: entity

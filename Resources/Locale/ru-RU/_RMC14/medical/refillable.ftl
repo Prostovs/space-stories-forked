@@ -4,3 +4,5 @@ cm-refillable-solution-whirring-noise = При заполнении { $user } в
 rmc-bottle-closed = Герметичная крышка полностью закрывает его.
 rmc-bottle-put-lid = Добавить крышку
 rmc-bottle-remove-lid = Снять крышку
+rmc-refillsolution-flush = Промыть контейнер
+rmc-refillsolution-flush-start = Вы удерживаете кнопку аварийной промывки. Подождите { $time } секунд...

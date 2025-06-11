@@ -136,6 +136,8 @@
   - type: XenoToggleChargingKnockback
     enabled: false
   - type: XenoToggleChargingStop
+  - type: FixedIdentity
+    name: cm-job-name-xeno-boiler
   - type: XenoDeathcloud
 
 - type: entity

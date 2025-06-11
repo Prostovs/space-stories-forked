@@ -259,6 +259,8 @@
       3: rmc-xeno-fem-elder
       4: rmc-xeno-fem-ancient
       5: rmc-xeno-fem-prime
+  - type: FixedIdentity
+    name: cm-job-name-xeno-queen
 
 - type: entity
   parent: RMCXenoQueenBase

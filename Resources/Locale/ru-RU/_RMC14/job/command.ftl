@@ -15,6 +15,9 @@ cm-job-name-executive-officer = Исполнительный офицер
 cm-job-description-executive-officer = Вы являетесь вторым командиром на борту корабля и следующим в цепочке командования после командира.
 cm-job-prefix-executive-officer = ИО
 CMJobExecutiveOfficer = Исполнительный офицер
+# Special operation capable
+rmc-job-prefix-forecon-marksman = МАРКСМН
+rmc-job-prefix-forecon-support-tech = ТП
 # Спецназ
 rmc-job-prefix-forecon = ФОРЕКОН
 rmc-job-prefix-forecon-co = КО ФОРЕКОН

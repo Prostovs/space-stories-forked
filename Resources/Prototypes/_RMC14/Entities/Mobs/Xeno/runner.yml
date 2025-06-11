@@ -117,6 +117,8 @@
   
   - type: MobCollision
     minimumSpeedModifier: 0.1
+  - type: FixedIdentity
+    name: cm-job-name-xeno-runner
 
 - type: entity
   parent: CMXenoRunnerBase

@@ -26,3 +26,4 @@ chat-radio-spp-cct = СПН CCT
 chat-radio-royal-marine = Королевские морпехи
 chat-radio-tse = Империя трех солнц
 chat-radio-hivemind = Улей
+chat-radio-marine-sun-riders = Солнечные Всадники

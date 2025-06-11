@@ -1,5 +1,3 @@
 ent-RMCRandomHumanoidCLFCellCommander = роль командира ячейки КОФ
-    .suffix = Роль
+    .suffix = Спавнер, Игрок
     .desc = { "" }
-ent-RMCIDCardCLFCellCommander = ID карта командира ячейки КОФ
-    .desc = { ent-CMIDCardBase.desc }
