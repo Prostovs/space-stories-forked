@@ -608,8 +608,6 @@
     state: "53"
   - type: Icon
     state: "53"
-  - type: RoofingEntity # Stories-Balance
-    range: 15
 
 - type: entity
   parent: CMBaseAlamoWall

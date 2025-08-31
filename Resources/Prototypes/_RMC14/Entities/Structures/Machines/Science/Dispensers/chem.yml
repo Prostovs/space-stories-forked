@@ -140,6 +140,7 @@
     state: chemstorage
     offset: 0.5,0
   - type: RMCChemicalStorage
+    baseRecharge: 10
 
 - type: entity
   parent: RMCChemStorageBase
@@ -148,6 +149,8 @@
   components:
   - type: RMCChemicalStorage
     network: RMCChemStorageGround
+    energy: 150
+    baseMax: 300
 
 - type: entity
   parent: RMCChemStorageBase
@@ -164,6 +167,8 @@
   components:
   - type: RMCChemicalStorage
     network: RMCChemStorageResearch
+    rechargePer: 2.5
+    maxPer: 50
 
 - type: entity
   parent: RMCChemDispenserBase
