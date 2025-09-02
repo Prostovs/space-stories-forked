@@ -2,6 +2,7 @@
   parent:
   - CMXenoUndeveloped
   - CMXenoFlammable
+  - RMCXenoVentCrawler
   id: CMXenoLarva
   name: Larva
   components:
@@ -96,6 +97,8 @@
       5: rmc-xeno-elder-larva
   - type: FixedIdentity
     name: cm-job-name-xeno-larva
+  - type: VentCrawler
+    ventCrawlIcon: larva
   - type: TTS # Stories-TTS
     voice: sophronia_franklin
 

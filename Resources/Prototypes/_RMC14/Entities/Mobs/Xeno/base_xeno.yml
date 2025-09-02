@@ -470,6 +470,14 @@
 #      task: CMXenoCompound
 
 - type: entity
+  abstract: true
+  id: RMCXenoVentCrawler
+  components:
+  - type: VentCrawler
+    ventCrawlIcon: unknown
+  - type: RMCTrayCrawler
+
+- type: entity
   id: CMXenoDeveloped
   parent:
   - CMXenoBase
