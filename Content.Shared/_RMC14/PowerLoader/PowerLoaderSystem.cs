@@ -6,7 +6,7 @@ using Content.Shared._RMC14.Dropship.ElectronicSystem;
 using Content.Shared._RMC14.Dropship.Fabricator;
 using Content.Shared._RMC14.Dropship.Utility.Components;
 using Content.Shared._RMC14.Dropship.Weapon;
-using Content.Shared._RMC14.Interaction; // <-- ДОБАВЬТЕ ЭТУ СТРОЧКУ
+using Content.Shared._RMC14.Interaction;
 using Content.Shared._RMC14.Map;
 using Content.Shared._RMC14.Marines.Skills;
 using Content.Shared._RMC14.PowerLoader.Events;

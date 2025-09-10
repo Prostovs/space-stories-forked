@@ -95,6 +95,8 @@
       barrel:
         Default: sniperbarrel
         Tiger: sniperbarrel_t
+  - type: RMCGunChamber
+    enabled: false
 
 - type: entity
   parent: BaseItem

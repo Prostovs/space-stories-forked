@@ -87,6 +87,8 @@
     skins:
       Default: /Textures/_Stories/Objects/Weapons/Guns/Snipers/xm43e1.rsi
       GoldenAutumn: /Textures/_Stories/Objects/Weapons/Snipers/xm43e1.rsi
+  - type: RMCGunChamber
+    enabled: false
 
 - type: entity
   parent: CMMagazineSniperM96S
