@@ -3,6 +3,7 @@ using System.Numerics;
 using Content.Server.Announcements;
 using Content.Server.Discord;
 using Content.Server.GameTicking.Events;
+using Content.Server.GameTicking.Presets;
 using Content.Server.Ghost;
 using Content.Server.Maps;
 using Content.Server.Roles;
@@ -405,6 +406,16 @@ namespace Content.Server.GameTicking
             }
 
             DebugTools.AssertEqual(readyPlayers.Count, ReadyPlayerCount());
+
+            // Stories-start
+            if (!force && Preset?.ID is "CMDistressSignal" or "STDistressSignal" or "STDistressSignalLowPop")
+            {
+                var lowPopThreshold = _prototypeManager.TryIndex<GamePresetPrototype>("STDistressSignalLowPop", out var lowPopPreset)
+                    ? lowPopPreset.MaxPlayers ?? int.MaxValue
+                    : int.MaxValue;
+                SetGamePreset(_playerManager.PlayerCount <= lowPopThreshold ? "STDistressSignalLowPop" : "STDistressSignal");
+            }
+            // Stories-end
 
             // Just in case it hasn't been loaded previously we'll try loading it.
             LoadMaps();
