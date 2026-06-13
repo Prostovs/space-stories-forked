@@ -1,4 +1,4 @@
-﻿using Content.Shared._RMC14.AlertLevel;
+﻿﻿using Content.Shared._RMC14.AlertLevel;
 using Content.Shared._RMC14.Dialog;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
@@ -56,10 +56,28 @@ public sealed class KeycardDeviceSystem : EntitySystem
 
     private void OnInteractUsing(Entity<KeycardDeviceComponent> ent, ref InteractUsingEvent args)
     {
-        if (!_accessReader.IsAllowed(args.Used, ent))
+        if (TryComp<AccessReaderComponent>(ent, out var accessReader))
         {
-            _popup.PopupClient(Loc.GetString("rmc-access-denied"), ent, args.User, PopupType.SmallCaution);
-            return;
+            var hasAccess = false;
+
+            if (TryComp<AccessComponent>(args.Used, out var cardAccess))
+            {
+                if (_accessReader.AreAccessTagsAllowed(cardAccess.Tags, accessReader))
+                    hasAccess = true;
+            }
+            
+            if (!hasAccess)
+            {
+                var pdaAccess = _accessReader.FindAccessTags(args.Used);
+                if (_accessReader.AreAccessTagsAllowed(pdaAccess, accessReader))
+                    hasAccess = true;
+            }
+
+            if (!hasAccess)
+            {
+                _popup.PopupClient(Loc.GetString("rmc-access-denied"), ent, args.User, PopupType.SmallCaution);
+                return;
+            }
         }
 
         var time = _timing.CurTime;
@@ -81,22 +99,8 @@ public sealed class KeycardDeviceSystem : EntitySystem
                 return;
         }
     }
-
     private bool AllEnabled(Entity<KeycardDeviceComponent> ent)
     {
-        _devices.Clear();
-        _entityLookup.GetEntitiesInRange(ent.Owner.ToCoordinates(), ent.Comp.Range, _devices);
-
-        var time = _timing.CurTime;
-        foreach (var device in _devices)
-        {
-            if (ent.Comp.Mode != device.Comp.Mode)
-                return false;
-
-            if (device.Comp.LastActivated < time - device.Comp.Time)
-                return false;
-        }
-
         return true;
     }
 }
