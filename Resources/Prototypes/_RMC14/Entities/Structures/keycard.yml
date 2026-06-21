@@ -15,8 +15,8 @@
   - type: InteractionOutline
   - type: Appearance
   - type: KeycardDevice
-  - type: AccessReader
-    access: [[RMCAccessCommand]]
+- type: AccessReader
+  access: [ [ "RMCAccessCommand" ] ]
   - type: UserInterface
     interfaces:
       enum.DialogUiKey.Key:
